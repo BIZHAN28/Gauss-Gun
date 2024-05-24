@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ChangeMass : MonoBehaviour
+{
+	public Rigidbody2D mass;
+	public Slider slider;
+	public Text text;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+		text.text = "Вес (Н): "+slider.value;
+		mass.mass = slider.value;
+    }
+}
